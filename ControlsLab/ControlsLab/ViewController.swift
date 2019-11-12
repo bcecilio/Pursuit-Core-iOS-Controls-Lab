@@ -20,6 +20,8 @@ class ViewController: UIViewController {
                     nums.text = "K"
                 } else if suitNumbers == 1 {
                     nums.text = "A"
+                } else if suitNumbers == 0 {
+                    nums.text = ""
                 } else {
                     nums.text = suitNumbers.description
                 }
@@ -56,10 +58,10 @@ class ViewController: UIViewController {
     }
     
     func configureStepper() {
-        suitStepper.minimumValue = Double(Int(1))
-        suitStepper.maximumValue = Double(Int(12))
-        suitStepper.stepValue = Double(Int(1))
-        suitStepper.value = Double(Int(2))
+        suitStepper.minimumValue = 1
+        suitStepper.maximumValue = 12
+        suitStepper.stepValue = 1
+        suitStepper.value = 1
     }
     
     override func viewDidLoad() {
